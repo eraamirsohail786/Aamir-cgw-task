@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Invoice Generate Buttons">
+        <div class="slds-p-around_medium">
+            <template if:true={oppData} for:each={oppData} for:item="opp" for:index="index">
+               <div key={opp.Id}>
+                <lightning-button 
+                    label={opp.ProductName}
+                    onclick={handleRedirect}
+                    class="slds-var-m-around_medium"
+                    data-quantity={opp.Quantity}
+                    data-unitprice={opp.UnitPrice}
+                    data-description ={opp.Description}
+                    >
+                </lightning-button>
+               </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Invoice Details" icon-name="custom:custom63">
+        <template if:true={data}>
+            <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}
+                hide-checkbox-column>
+            </lightning-datatable>
+        </template>
+        <template if:false={data}>
+            <p>No data found in URL parameters.</p>
+        </template>
+    </lightning-card>
+</template>
